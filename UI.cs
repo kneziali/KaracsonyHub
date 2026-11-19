@@ -1,4 +1,6 @@
-﻿for (int i = 0; i <= 48; i++)
+﻿Console.Title = "KarácsonyHUB";
+
+for (int i = 0; i <= 48; i++)
 {
     if (i % 2 == 0)
     {
@@ -91,10 +93,11 @@ for (int i = 0; i <=96; i++)
 }
 
 Console.WriteLine("");
-Console.WriteLine(" H e l l o   w o r l d");
-Console.WriteLine(" H e l l o   w o r l d");
-Console.WriteLine(" H e l l o   w o r l d");
-Console.WriteLine(" H e l l o   w o r l d");
+Console.WriteLine("                     V Á L A S S Z O N   A Z   O P C I Ó K   K Ö Z Ü L:");
+Console.WriteLine("");
+Console.WriteLine("                                    H e l l o   w o r l d");
+Console.WriteLine("                                    H e l l o   w o r l d");
+Console.WriteLine("                                    H e l l o   w o r l d");
 
 for (int i = 0; i <= 10; i++)
 {
