@@ -120,6 +120,45 @@ ELKÉSZÍTÉS:
 9. Hagyd megszilárdulni, majd szeleteld.
 ";
 
+string zene1 = @"
+══════ ALL I WANT FOR CHRISTMAS IS YOU ══════
+Mariah Carey – Vidám, romantikus karácsonyi popsláger.
+";
+
+string zene2 = @"
+════════════ LAST CHRISTMAS ════════════
+Wham! – Klasszikus, szerelmes karácsonyi sláger.
+";
+
+string zene3 = @"
+════════════ JINGLE BELLS ════════════
+James Lord Pierpont – Vidám, hagyományos karácsonyi dal.
+";
+
+string zene4 = @"
+════════════ FELIZ NAVIDAD ════════════
+José Feliciano – Vidám, spanyol-angol karácsonyi zene.
+";
+
+string zene5 = @"
+════ ROCKIN' AROUND THE CHRISTMAS TREE ════
+Brenda Lee – Pörgős, táncos ünnepi sláger.
+";
+
+string zene6 = @"
+════════════ WHITE CHRISTMAS ════════════
+Bing Crosby – Meghitt, havas karácsonyi hangulat.
+";
+
+string zene7 = @"
+════════════ LET IT SNOW ════════════
+Vaughn Monroe – Romantikus, klasszikus téli dal.
+";
+
+string zene8 = @"
+════ IT'S BEGINNING TO LOOK A LOT LIKE CHRISTMAS ════
+Michael Bublé – Elegáns, ünnepi hangulatú dal.
+";
 
 
 while (!selected)
@@ -230,7 +269,67 @@ if (option == 0)
 
 }
 
+if (option == 1)
+{
+    Console.Clear() ;
+
+    Console.WriteLine(zene1);
+    Console.WriteLine(zene2);
+    Console.WriteLine(zene3);
+    Console.WriteLine(zene4);
+    Console.WriteLine(zene5);
+    Console.WriteLine(zene6);
+    Console.WriteLine(zene7);
+    Console.WriteLine(zene8);
+    Console.Write("(1-8) Elviszem a receptet (9) Vissza: ");
+    int zeneL = int.Parse(Console.ReadLine());
+
+    //if (zeneL == 1)
+    //{
+
+    //}
 
 
+    //if (zeneL == 2)
+    //{
+
+    //}
+
+    //if (zeneL == 3)
+    //{
+
+    //}
+
+    //if (zeneL == 4)
+    //{
+
+    //}
+
+    //if (zeneL == 5)
+    //{
+
+    //}
+
+    //if (zeneL == 6)
+    //{
+
+    //}
+
+    //if (zeneL == 7)
+    //{
+
+    //}
+
+    //if (zeneL == 8)
+    //{
+
+    //}
+
+    //if (zeneL == 9)
+    //{
+
+    //}
+
+}
 
 Console.ReadKey();
