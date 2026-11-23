@@ -1,6 +1,9 @@
 ﻿Console.Title = "KarácsonyHUB";
 Console.CursorVisible = false;
 string[] options = { "Karácsonyi receptek", "Karácsonyi Zenék", "Program ötletek", "Kilépés" };
+List<string> recept = new();
+List<string> zene = new();
+List<string> program = new();
 
 
 string mezeskalacs = @"
@@ -338,6 +341,28 @@ void border(int x, int y)
 }
 
 
+void saveData(List<string> lista1, List<string> lista2, List<string> lista3)
+{
+    File.WriteAllText("data.txt", ""); // felülírja a fájlt
+
+    foreach (string data in lista1)
+    {
+        File.AppendAllText("data.txt", data + "\n");
+    }
+
+    foreach (string data in lista2)
+    {
+        File.AppendAllText("data.txt", data + "\n");
+    }
+
+    foreach (string data in lista3)
+    {
+        File.AppendAllText("data.txt", data + "\n");
+    }
+
+}
+
+
 
 // AZ APP KEZDEZETE
 
@@ -405,314 +430,285 @@ while (true)
 
     if (option == 0)
     {
-        Console.CursorVisible = true;
-        Console.Clear();
-        header();
-        Console.WriteLine();
-        Console.WriteLine();
-        border(95, 13);
-        Console.SetCursorPosition(20, 14);
-
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.Write("* * *   V Á L A S S Z   A Z   O P C I Ó K   K Ö Z Ü L   * * *");
-        Console.WriteLine();
-
-        Console.SetCursorPosition(35, 18);
-        Console.WriteLine("(1) Mézeskalács");
-        Console.SetCursorPosition(35, 19);
-        Console.WriteLine("(2) Diós Bejgli");
-        Console.SetCursorPosition(35, 20);
-        Console.WriteLine("(3) Hókifli");
-        Console.SetCursorPosition(35, 21);
-        Console.WriteLine("(4) Zserbó");
-        Console.SetCursorPosition(35, 22);
-        Console.WriteLine("(5) Vissza");
-        Console.SetCursorPosition(35, 23);
-
-
-        Console.Write("Melyiket nézed meg: ");
-
-        
-        try
+        while (true)
         {
-            int receptekV = int.Parse(Console.ReadLine());
-            if (receptekV == 5) { }
+            Console.CursorVisible = true;
+            Console.Clear();
+            header();
+            Console.WriteLine();
+            Console.WriteLine();
+            border(95, 13);
+            Console.SetCursorPosition(20, 14);
 
-            if (receptekV == 1)
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("* * *   V Á L A S S Z   A Z   O P C I Ó K   K Ö Z Ü L   * * *");
+            Console.WriteLine();
+
+            Console.SetCursorPosition(35, 18);
+            Console.WriteLine("(1) Mézeskalács");
+            Console.SetCursorPosition(35, 19);
+            Console.WriteLine("(2) Diós Bejgli");
+            Console.SetCursorPosition(35, 20);
+            Console.WriteLine("(3) Hókifli");
+            Console.SetCursorPosition(35, 21);
+            Console.WriteLine("(4) Zserbó");
+            Console.SetCursorPosition(35, 22);
+            Console.WriteLine("(5) Vissza");
+            Console.SetCursorPosition(35, 23);
+
+
+            Console.Write("Melyiket nézed meg: ");
+
+
+            try
             {
-                Console.Clear();
-                header();
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine();
-                Console.WriteLine(mezeskalacs);
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write("(1) Elviszem a receptet (2) Vissza: ");
-                try
-                {
-                    int receptekM = int.Parse(Console.ReadLine());
-                    //if (receptekM == 1)
-                    //{
+                int receptekV = int.Parse(Console.ReadLine());
 
-                    //}
-                    if (receptekM == 2) { }
-                }
-                catch(SystemException)
-                {
-                    continue;
-                }
                 
 
-            }
+                if (receptekV == 1)
+                {
+                    Console.Clear();
+                    header();
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine();
+                    Console.WriteLine(mezeskalacs);
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("(1) Elviszem a receptet (2) Vissza: ");
+                    try
+                    {
+                        int receptekM = int.Parse(Console.ReadLine());
+                        if (receptekM == 1)
+                        {
+                            recept.Add(mezeskalacs);
+                        }
+                        if (receptekM == 2) { }
+                    }
+                    catch (SystemException)
+                    {
+                        continue;
+                    }
 
-            if (receptekV == 2)
+
+                }
+
+                if (receptekV == 2)
+                {
+                    Console.Clear();
+                    header();
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine();
+                    Console.WriteLine(diosBejgli);
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("(1) Elviszem a receptet (2) Vissza: ");
+                    try
+                    {
+                        int receptekM = int.Parse(Console.ReadLine());
+                        if (receptekM == 1)
+                        {
+                            recept.Add(diosBejgli);
+                        }
+                        if (receptekM == 2) { }
+                    }
+                    catch (SystemException)
+                    {
+                        continue;
+                    }
+
+                }
+
+                if (receptekV == 3)
+                {
+                    Console.Clear();
+                    header();
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine();
+                    Console.WriteLine(hokifli);
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("(1) Elviszem a receptet (2) Vissza: ");
+                    try
+                    {
+                        int receptekM = int.Parse(Console.ReadLine());
+                        if (receptekM == 1)
+                        {
+                            recept.Add(hokifli);
+                        }
+                        if (receptekM == 2) { }
+                    }
+                    catch (SystemException)
+                    {
+                        continue;
+                    }
+
+                }
+
+                if (receptekV == 4)
+                {
+                    Console.Clear();
+                    header();
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine();
+                    Console.WriteLine(zserbo);
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("(1) Elviszem a receptet (2) Vissza: ");
+                    try
+                    {
+                        int receptekM = int.Parse(Console.ReadLine());
+                        if (receptekM == 1)
+                        {
+                            recept.Add(zserbo);
+                        }
+                        if (receptekM == 2) { }
+                    }
+                    catch (SystemException)
+                    {
+                        continue;
+                    }
+                }
+
+                if (receptekV == 5) { break; }
+
+            }
+            catch (SystemException)
             {
-                Console.Clear();
-                header();
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine();
-                Console.WriteLine(diosBejgli);
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write("(1) Elviszem a receptet (2) Vissza: ");
-                try
-                {
-                    int receptekM = int.Parse(Console.ReadLine());
-                    //if (receptekM == 1)
-                    //{
 
-                    //}
-                    if (receptekM == 2) { }
-                }
-                catch (SystemException)
-                {
-                    continue;
-                }
-
+                continue;
             }
 
-            if (receptekV == 3)
-            {
-                Console.Clear();
-                header();
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine();
-                Console.WriteLine(hokifli);
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write("(1) Elviszem a receptet (2) Vissza: ");
-                try
-                {
-                    int receptekM = int.Parse(Console.ReadLine());
-                    //if (receptekM == 1)
-                    //{
-
-                    //}
-                    if (receptekM == 2) { }
-                }
-                catch (SystemException)
-                {
-                    continue;
-                }
-
-            }
-
-            if (receptekV == 4)
-            {
-                Console.Clear();
-                header();
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine();
-                Console.WriteLine(zserbo);
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write("(1) Elviszem a receptet (2) Vissza: ");
-                try
-                {
-                    int receptekM = int.Parse(Console.ReadLine());
-                    //if (receptekM == 1)
-                    //{
-
-                    //}
-                    if (receptekM == 2){}
-                }
-                catch (SystemException)
-                {
-                    continue;
-                }
-            }
-
-        }
-        catch (SystemException)
-        {
-
-            continue;
-        }
-        
+        }       
     }
 
     Console.CursorVisible = false;
 
     if (option == 1)
     {
-        Console.CursorVisible = true;
-        Console.Clear();
-
-        header();
-        Console.WriteLine();
-
-        Console.ForegroundColor = ConsoleColor.White;
-
-        Console.WriteLine(zene1);
-        Console.WriteLine(zene2);
-        Console.WriteLine(zene3);
-        Console.WriteLine(zene4);
-        Console.WriteLine(zene5);
-        Console.WriteLine(zene6);
-        Console.WriteLine(zene7);
-        Console.WriteLine(zene8);
-        Console.ForegroundColor = ConsoleColor.Green;
-
-        Console.Write("(1-8) Elviszem a receptet (9) Vissza: ");
-
-        try
+        while (true)
         {
-            int zeneL = int.Parse(Console.ReadLine());
+            Console.CursorVisible = true;
+            Console.Clear();
 
-            if (zeneL == 9) { }
+            header();
+            Console.WriteLine();
+
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.WriteLine(zene1);
+            Console.WriteLine(zene2);
+            Console.WriteLine(zene3);
+            Console.WriteLine(zene4);
+            Console.WriteLine(zene5);
+            Console.WriteLine(zene6);
+            Console.WriteLine(zene7);
+            Console.WriteLine(zene8);
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            Console.Write("(1-8) Elviszem a receptet (9) Vissza: ");
+
+            try
+            {
+                int zeneL = int.Parse(Console.ReadLine());
+
+                switch (zeneL)
+                {
+                    case 1:
+                        zene.Add(zene1);
+                        break;
+                    case 2:
+                        zene.Add(zene2);
+                        break;
+                    case 3:
+                        zene.Add(zene3);
+                        break;
+                    case 4:
+                        zene.Add(zene4);
+                        break;
+                    case 5:
+                        zene.Add(zene5);
+                        break;
+                    case 6:
+                        zene.Add(zene6);
+                        break;
+                    case 7:
+                        zene.Add(zene7);
+                        break;
+                    case 8:
+                        zene.Add(zene8);
+                        break;
+                }
+
+                if (zeneL == 9) { break; }
+            }
+            catch (SystemException)
+            {
+                continue;
+            }
         }
-        catch(SystemException)
-        {
-            continue;
-        }
-
-        
-
-        //if (zeneL == 1)
-        //{
-
-        //}
-
-
-        //if (zeneL == 2)
-        //{
-
-        //}
-
-        //if (zeneL == 3)
-        //{
-
-        //}
-
-        //if (zeneL == 4)
-        //{
-
-        //}
-
-        //if (zeneL == 5)
-        //{
-
-        //}
-
-        //if (zeneL == 6)
-        //{
-
-        //}
-
-        //if (zeneL == 7)
-        //{
-
-        //}
-
-        //if (zeneL == 8)
-        //{
-
-        //}
-
-        //if (zeneL == 9)
-        //{
-
-        //}
-
     }
     Console.CursorVisible = false;
 
 
     if (option == 2)
     {
-        Console.CursorVisible = true;
-        Console.Clear();
-
-        header();
-        Console.WriteLine();
-        Console.ForegroundColor = ConsoleColor.White;
-        Console.WriteLine(program1);
-        Console.WriteLine(program2);
-        Console.WriteLine(program3);
-        Console.WriteLine(program4);
-        Console.WriteLine(program5);
-        Console.WriteLine(program6);
-        Console.WriteLine(program7);
-        Console.WriteLine(program8);
-        Console.ForegroundColor = ConsoleColor.Green;
-
-        Console.Write("(1-8) Ellopom az ötletet (9) Vissza: ");
-        
-
-        try
+        while (true)
         {
-            int programL = int.Parse(Console.ReadLine());
+            Console.CursorVisible = true;
+            Console.Clear();
 
-            if (programL == 9) { }
+            header();
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(program1);
+            Console.WriteLine(program2);
+            Console.WriteLine(program3);
+            Console.WriteLine(program4);
+            Console.WriteLine(program5);
+            Console.WriteLine(program6);
+            Console.WriteLine(program7);
+            Console.WriteLine(program8);
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            Console.Write("(1-8) Ellopom az ötletet (9) Vissza: ");
+
+
+            try
+            {
+                int programL = int.Parse(Console.ReadLine());
+
+                switch (programL)
+                {
+                    case 1:
+                        program.Add(program1);
+                        break;
+                    case 2:
+                        program.Add(program2);
+                        break;
+                    case 3:
+                        program.Add(program3);
+                        break;
+                    case 4:
+                        program.Add(program4);
+                        break;
+                    case 5:
+                        program.Add(program5);
+                        break;
+                    case 6:
+                        program.Add(program6);
+                        break;
+                    case 7:
+                        program.Add(program7);
+                        break;
+                    case 8:
+                        program.Add(program8);
+                        break;
+                }
+
+                if (programL == 9) { break; }
+            }
+            catch (SystemException)
+            {
+                continue;
+            }
         }
-        catch (SystemException)
-        {
-            continue;
-        }
-
-
-        //if (programL == 1)
-        //{
-
-        //}
-
-        //if (programL == 2)
-        //{
-
-        //}
-
-        //if (programL == 3)
-        //{
-
-        //}
-
-        //if (programL == 4)
-        //{
-
-        //}
-
-        //if (programL == 5)
-        //{
-
-        //}
-
-        //if (programL == 6)
-        //{
-
-        //}
-
-        //if (programL == 7)
-        //{
-
-        //}
-
-        //if (programL == 8)
-        //{
-
-        //}
-
-        //if (programL == 9)
-        //{
-
-        //}
-
-
     }
     Console.CursorVisible = false;
 
@@ -720,6 +716,7 @@ while (true)
 
     if (option == 3)
     {
+        saveData(recept, zene, program);
         Environment.Exit(0);
     }
 
