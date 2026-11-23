@@ -116,6 +116,86 @@ ELKÉSZÍTÉS:
 9. Hagyd megszilárdulni, majd szeleteld.
 ";
 
+string zene1 = @"
+══════ (1) ALL I WANT FOR CHRISTMAS IS YOU ══════
+Mariah Carey – Vidám, romantikus karácsonyi popsláger.
+";
+
+string zene2 = @"
+════════════ (2) LAST CHRISTMAS ════════════
+Wham! – Klasszikus, szerelmes karácsonyi sláger.
+";
+
+string zene3 = @"
+════════════ (3) JINGLE BELLS ════════════
+James Lord Pierpont – Vidám, hagyományos karácsonyi dal.
+";
+
+string zene4 = @"
+════════════ (4) FELIZ NAVIDAD ════════════
+José Feliciano – Vidám, spanyol-angol karácsonyi zene.
+";
+
+string zene5 = @"
+════ ROCKIN' (5) AROUND THE CHRISTMAS TREE ════
+Brenda Lee – Pörgős, táncos ünnepi sláger.
+";
+
+string zene6 = @"
+════════════ (6) WHITE CHRISTMAS ════════════
+Bing Crosby – Meghitt, havas karácsonyi hangulat.
+";
+
+string zene7 = @"
+════════════ (7) LET IT SNOW ════════════
+Vaughn Monroe – Romantikus, klasszikus téli dal.
+";
+
+string zene8 = @"
+════ (8) IT'S  BEGINNING TO LOOK A LOT LIKE CHRISTMAS ════
+Michael Bublé – Elegáns, ünnepi hangulatú dal.
+";
+
+
+string program1 = @"
+══════════ (1) KARÁCSONYI KINCSESKERESÉS ══════════
+Elrejtett ajándékok és ünnepi rejtvények felkutatása.
+";
+
+string program2 = @"
+══════════ (2) KARÁCSONYI SZABADULÓSZOBA ══════════
+Ünnepi fejtörők megoldása a karácsonyi küldetés teljesítéséhez.
+";
+
+string program3 = @"
+══════════ (3) FORRÓCSOKI-KÓSTOLÓ ══════════
+Különleges forró csokoládék kipróbálása különböző ízekben.
+";
+
+string program4 = @"
+══════════ (4) KARÁCSONYI FOTÓZÁS ══════════
+Vicces és kreatív ünnepi képek készítése jelmezekben.
+";
+
+string program5 = @"
+══════════ (5) MÉZESKALÁCS-FALU ÉPÍTÉS ══════════
+Egy egész apró karácsonyi falu elkészítése mézeskalácsból.
+";
+
+string program6 = @"
+══════════ (6) KARÁCSONYI KARAOKE ══════════
+Kedvenc karácsonyi dalok közös eléneklése.
+";
+
+string program7 = @"
+══════════ (7) KARÁCSONYI FILMEST ══════════
+Filmvetítés takarókkal, pattogatott kukoricával és finomságokkal.
+";
+
+string program8 = @"
+══════════ (8) ADVENTI ÉJSZAKAI SÉTA ══════════
+A város ünnepi fényeinek felfedezése esti séta közben.
+";
 
 
 
@@ -144,7 +224,7 @@ void header()
     {
         if (i % 2 == 0)
         {
-            Console.ForegroundColor = ConsoleColor.White; 
+            Console.ForegroundColor = ConsoleColor.White;
             Console.Write("██");
         }
         else
@@ -222,7 +302,7 @@ void border(int x, int y)
         Console.Write("║");
     }
 
-    Console.SetCursorPosition(0, 25);
+    Console.SetCursorPosition(0, y + 12);
     for (int i = 0; i <= x; i++)
     {
         if (i == 0)
@@ -325,21 +405,319 @@ while (true)
 
     if (option == 0)
     {
+        Console.CursorVisible = true;
         Console.Clear();
         header();
         Console.WriteLine();
         Console.WriteLine();
-
-        Console.WriteLine("(1) Mézeskalács");
-        Console.WriteLine("(2) Diós Bejgli");
-        Console.WriteLine("(3) Hókifli");
-        Console.WriteLine("(4) Zserbó");
-        Console.Write("Melyiket nézed meg: ");
         border(95, 13);
+        Console.SetCursorPosition(20, 14);
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.Write("* * *   V Á L A S S Z   A Z   O P C I Ó K   K Ö Z Ü L   * * *");
+        Console.WriteLine();
+
+        Console.SetCursorPosition(35, 18);
+        Console.WriteLine("(1) Mézeskalács");
+        Console.SetCursorPosition(35, 19);
+        Console.WriteLine("(2) Diós Bejgli");
+        Console.SetCursorPosition(35, 20);
+        Console.WriteLine("(3) Hókifli");
+        Console.SetCursorPosition(35, 21);
+        Console.WriteLine("(4) Zserbó");
+        Console.SetCursorPosition(35, 22);
+        Console.WriteLine("(5) Vissza");
+        Console.SetCursorPosition(35, 23);
+
+
+        Console.Write("Melyiket nézed meg: ");
 
         
-        int receptekV = int.Parse(Console.ReadLine());
+        try
+        {
+            int receptekV = int.Parse(Console.ReadLine());
+            if (receptekV == 5) { }
+
+            if (receptekV == 1)
+            {
+                Console.Clear();
+                header();
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine();
+                Console.WriteLine(mezeskalacs);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("(1) Elviszem a receptet (2) Vissza: ");
+                try
+                {
+                    int receptekM = int.Parse(Console.ReadLine());
+                    //if (receptekM == 1)
+                    //{
+
+                    //}
+                    if (receptekM == 2) { }
+                }
+                catch(SystemException)
+                {
+                    continue;
+                }
+                
+
+            }
+
+            if (receptekV == 2)
+            {
+                Console.Clear();
+                header();
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine();
+                Console.WriteLine(diosBejgli);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("(1) Elviszem a receptet (2) Vissza: ");
+                try
+                {
+                    int receptekM = int.Parse(Console.ReadLine());
+                    //if (receptekM == 1)
+                    //{
+
+                    //}
+                    if (receptekM == 2) { }
+                }
+                catch (SystemException)
+                {
+                    continue;
+                }
+
+            }
+
+            if (receptekV == 3)
+            {
+                Console.Clear();
+                header();
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine();
+                Console.WriteLine(hokifli);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("(1) Elviszem a receptet (2) Vissza: ");
+                try
+                {
+                    int receptekM = int.Parse(Console.ReadLine());
+                    //if (receptekM == 1)
+                    //{
+
+                    //}
+                    if (receptekM == 2) { }
+                }
+                catch (SystemException)
+                {
+                    continue;
+                }
+
+            }
+
+            if (receptekV == 4)
+            {
+                Console.Clear();
+                header();
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine();
+                Console.WriteLine(zserbo);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("(1) Elviszem a receptet (2) Vissza: ");
+                try
+                {
+                    int receptekM = int.Parse(Console.ReadLine());
+                    //if (receptekM == 1)
+                    //{
+
+                    //}
+                    if (receptekM == 2){}
+                }
+                catch (SystemException)
+                {
+                    continue;
+                }
+            }
+
+        }
+        catch (SystemException)
+        {
+
+            continue;
+        }
+        
     }
+
+    Console.CursorVisible = false;
+
+    if (option == 1)
+    {
+        Console.CursorVisible = true;
+        Console.Clear();
+
+        header();
+        Console.WriteLine();
+
+        Console.ForegroundColor = ConsoleColor.White;
+
+        Console.WriteLine(zene1);
+        Console.WriteLine(zene2);
+        Console.WriteLine(zene3);
+        Console.WriteLine(zene4);
+        Console.WriteLine(zene5);
+        Console.WriteLine(zene6);
+        Console.WriteLine(zene7);
+        Console.WriteLine(zene8);
+        Console.ForegroundColor = ConsoleColor.Green;
+
+        Console.Write("(1-8) Elviszem a receptet (9) Vissza: ");
+
+        try
+        {
+            int zeneL = int.Parse(Console.ReadLine());
+
+            if (zeneL == 9) { }
+        }
+        catch(SystemException)
+        {
+            continue;
+        }
+
+        
+
+        //if (zeneL == 1)
+        //{
+
+        //}
+
+
+        //if (zeneL == 2)
+        //{
+
+        //}
+
+        //if (zeneL == 3)
+        //{
+
+        //}
+
+        //if (zeneL == 4)
+        //{
+
+        //}
+
+        //if (zeneL == 5)
+        //{
+
+        //}
+
+        //if (zeneL == 6)
+        //{
+
+        //}
+
+        //if (zeneL == 7)
+        //{
+
+        //}
+
+        //if (zeneL == 8)
+        //{
+
+        //}
+
+        //if (zeneL == 9)
+        //{
+
+        //}
+
+    }
+    Console.CursorVisible = false;
+
+
+    if (option == 2)
+    {
+        Console.CursorVisible = true;
+        Console.Clear();
+
+        header();
+        Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.WriteLine(program1);
+        Console.WriteLine(program2);
+        Console.WriteLine(program3);
+        Console.WriteLine(program4);
+        Console.WriteLine(program5);
+        Console.WriteLine(program6);
+        Console.WriteLine(program7);
+        Console.WriteLine(program8);
+        Console.ForegroundColor = ConsoleColor.Green;
+
+        Console.Write("(1-8) Ellopom az ötletet (9) Vissza: ");
+        
+
+        try
+        {
+            int programL = int.Parse(Console.ReadLine());
+
+            if (programL == 9) { }
+        }
+        catch (SystemException)
+        {
+            continue;
+        }
+
+
+        //if (programL == 1)
+        //{
+
+        //}
+
+        //if (programL == 2)
+        //{
+
+        //}
+
+        //if (programL == 3)
+        //{
+
+        //}
+
+        //if (programL == 4)
+        //{
+
+        //}
+
+        //if (programL == 5)
+        //{
+
+        //}
+
+        //if (programL == 6)
+        //{
+
+        //}
+
+        //if (programL == 7)
+        //{
+
+        //}
+
+        //if (programL == 8)
+        //{
+
+        //}
+
+        //if (programL == 9)
+        //{
+
+        //}
+
+
+    }
+    Console.CursorVisible = false;
+
+
+
     if (option == 3)
     {
         Environment.Exit(0);
@@ -348,4 +726,3 @@ while (true)
     Console.ReadKey();
     selected = false;
 }
-
