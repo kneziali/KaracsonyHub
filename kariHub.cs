@@ -121,43 +121,84 @@ ELKÉSZÍTÉS:
 ";
 
 string zene1 = @"
-══════ ALL I WANT FOR CHRISTMAS IS YOU ══════
+══════ (1) ALL I WANT FOR CHRISTMAS IS YOU ══════
 Mariah Carey – Vidám, romantikus karácsonyi popsláger.
 ";
 
 string zene2 = @"
-════════════ LAST CHRISTMAS ════════════
+════════════ (2) LAST CHRISTMAS ════════════
 Wham! – Klasszikus, szerelmes karácsonyi sláger.
 ";
 
 string zene3 = @"
-════════════ JINGLE BELLS ════════════
+════════════ (3) JINGLE BELLS ════════════
 James Lord Pierpont – Vidám, hagyományos karácsonyi dal.
 ";
 
 string zene4 = @"
-════════════ FELIZ NAVIDAD ════════════
+════════════ (4) FELIZ NAVIDAD ════════════
 José Feliciano – Vidám, spanyol-angol karácsonyi zene.
 ";
 
 string zene5 = @"
-════ ROCKIN' AROUND THE CHRISTMAS TREE ════
+════ ROCKIN' (5) AROUND THE CHRISTMAS TREE ════
 Brenda Lee – Pörgős, táncos ünnepi sláger.
 ";
 
 string zene6 = @"
-════════════ WHITE CHRISTMAS ════════════
+════════════ (6) WHITE CHRISTMAS ════════════
 Bing Crosby – Meghitt, havas karácsonyi hangulat.
 ";
 
 string zene7 = @"
-════════════ LET IT SNOW ════════════
+════════════ (7) LET IT SNOW ════════════
 Vaughn Monroe – Romantikus, klasszikus téli dal.
 ";
 
 string zene8 = @"
-════ IT'S BEGINNING TO LOOK A LOT LIKE CHRISTMAS ════
+════ (8) IT'S  BEGINNING TO LOOK A LOT LIKE CHRISTMAS ════
 Michael Bublé – Elegáns, ünnepi hangulatú dal.
+";
+ 
+
+string program1 = @"
+══════════ (1) KARÁCSONYI KINCSESKERESÉS ══════════
+Elrejtett ajándékok és ünnepi rejtvények felkutatása.
+";
+
+string program2 = @"
+══════════ (2) KARÁCSONYI SZABADULÓSZOBA ══════════
+Ünnepi fejtörők megoldása a karácsonyi küldetés teljesítéséhez.
+";
+
+string program3 = @"
+══════════ (3) FORRÓCSOKI-KÓSTOLÓ ══════════
+Különleges forró csokoládék kipróbálása különböző ízekben.
+";
+
+string program4 = @"
+══════════ (4) KARÁCSONYI FOTÓZÁS ══════════
+Vicces és kreatív ünnepi képek készítése jelmezekben.
+";
+
+string program5 = @"
+══════════ (5) MÉZESKALÁCS-FALU ÉPÍTÉS ══════════
+Egy egész apró karácsonyi falu elkészítése mézeskalácsból.
+";
+
+string program6 = @"
+══════════ (6) KARÁCSONYI KARAOKE ══════════
+Kedvenc karácsonyi dalok közös eléneklése.
+";
+
+string program7 = @"
+══════════ (7) KARÁCSONYI FILMEST ══════════
+Filmvetítés takarókkal, pattogatott kukoricával és finomságokkal.
+";
+
+string program8 = @"
+══════════ (8) ADVENTI ÉJSZAKAI SÉTA ══════════
+A város ünnepi fényeinek felfedezése esti séta közben.
 ";
 
 
@@ -329,6 +370,72 @@ if (option == 1)
     //{
 
     //}
+
+}
+
+
+
+if (option == 2)
+{
+    Console.Clear();
+    Console.WriteLine(program1);
+    Console.WriteLine(program2);
+    Console.WriteLine(program3);
+    Console.WriteLine(program4);
+    Console.WriteLine(program5);
+    Console.WriteLine(program6);
+    Console.WriteLine(program7);
+    Console.WriteLine(program8);
+
+    Console.Write("(1-8) Ellopom az ötletet (9) Vissza: ");
+    int programL = int.Parse(Console.ReadLine());
+
+
+    //if (programL == 1)
+    //{
+
+    //}
+
+    //if (programL == 2)
+    //{
+
+    //}
+
+    //if (programL == 3)
+    //{
+
+    //}
+
+    //if (programL == 4)
+    //{
+
+    //}
+
+    //if (programL == 5)
+    //{
+
+    //}
+
+    //if (programL == 6)
+    //{
+
+    //}
+
+    //if (programL == 7)
+    //{
+
+    //}
+
+    //if (programL == 8)
+    //{
+
+    //}
+
+    //if (programL == 9)
+    //{
+
+    //}
+
 
 }
 
