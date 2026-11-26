@@ -6,7 +6,7 @@ A **KarácsonyHUB** egy C# app amely segít a karácsonyi készülődéshez. A p
 
 Az alkalmazás elindítása után a KarácsonyHUB főmenüje jelenik meg, ahol a felhasználó négy lehetőség közül választhat. Ezek közül a fel-le nyilakkal lehet navigálni, a kiválasztás pedig az "Enter"-el.
 
-![KarácsonyHUB](images/karacsonyhub.png)
+![KarácsonyHUB](karacsonyhub.PNG)
 
 ## Főbb funkciók
 
@@ -14,7 +14,7 @@ Az alkalmazás elindítása után a KarácsonyHUB főmenüje jelenik meg, ahol a
 
 Négy klasszikus karácsonyi sütemény receptje található meg az alkalmazásban:
 
-![KarácsonyHUB](images/receptek.png)
+![KarácsonyHUB](images/receptek.PNG)
 
 A receptek kiválasztása útán tartalmazzák a szükséges hozzávalókat és az elkészítés lépéseit. A kiválasztott receptek elmenthetők.
 
@@ -22,7 +22,7 @@ A receptek kiválasztása útán tartalmazzák a szükséges hozzávalókat és 
 
 Nyolc ismert karácsonyi dal közül lehet választani. <br>Minden dalhoz tartozik egy rövid leírás, amely bemutatja annak hangulatát. A kiválasztott zenék a data.txt file-ba kerülnek.
 
-![KarácsonyHUB](images/zenek.png)
+![KarácsonyHUB](images/zenek.PNG)
  
  
  
@@ -32,7 +32,7 @@ Nyolc ismert karácsonyi dal közül lehet választani. <br>Minden dalhoz tartoz
 
 Nyolc különböző ünnepi programötlet közül lehet válogatni, például karácsonyi kincskeresés, forrócsoki-kóstoló vagy mézeskalács-falu építés. A kiválasztott ötletek szintén elmenthetők.
 
-![KarácsonyHUB](images/otletek.png)
+![KarácsonyHUB](images/otletek.PNG)
  
  
 
