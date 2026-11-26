@@ -6,7 +6,7 @@ A **KarácsonyHUB** egy C# app amely segít a karácsonyi készülődéshez. A p
 
 Az alkalmazás elindítása után a KarácsonyHUB főmenüje jelenik meg, ahol a felhasználó négy lehetőség közül választhat. Ezek közül a fel-le nyilakkal lehet navigálni, a kiválasztás pedig az "Enter"-el.
 
-![KarácsonyHUB](karacsonyhub.PNG)
+![KarácsonyHUB](images/karacsonyhub.PNG)
 
 ## Főbb funkciók
 
